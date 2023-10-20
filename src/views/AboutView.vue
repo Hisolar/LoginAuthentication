@@ -65,7 +65,9 @@ const adminLogin = () => {
       email: email.value,
       password: password.value,
     })
-    .then((success) => {})
+    .then((success) => {
+      formIsLoading.value = false;
+    })
     .catch((err) => {
       formIsLoading.value = false;
       toast(err.response.data.message, {
