@@ -5,8 +5,13 @@ import { createPinia } from "pinia";
 
 import App from "./App.vue";
 import router from "./router";
+import { library } from "@fortawesome/fontawesome-svg-core";
+import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
+import { faUserSecret } from "@fortawesome/free-solid-svg-icons";
+import { fas } from "@fortawesome/free-solid-svg-icons";
+library.add(faUserSecret, fas);
 
-const app = createApp(App);
+const app = createApp(App).component("font-awesome-icon", FontAwesomeIcon);
 axios.defaults.headers["Accept"] = "application/json";
 
 axios.interceptors.response.use(
