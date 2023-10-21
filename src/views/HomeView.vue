@@ -1,6 +1,8 @@
 <script setup>
 import Container from "../components/Menus/Container.vue";
 import Items from "../components/Menus/Items.vue";
+import DashBoard from "../components/Dashboard.vue";
+import Modules from "../components/Modules.vue";
 import { useRoute } from "vue-router";
 const route = useRoute();
 </script>
@@ -41,6 +43,87 @@ const route = useRoute();
         >
       </Container>
     </div>
-    <article></article>
+    <article>
+      <DashBoard>
+        <div class="flex items-center">
+          <p class="text-xl font-light">Hello Amal</p>
+          <div class="relative">
+            <input
+              class="outline-none bg-transparent border border-black px-4"
+              type="search"
+              placeholder="search"
+            />
+            <img
+              class="w-4 absolute top-[6px] left-[3px]"
+              src="https://res.cloudinary.com/dxiflsxek/image/upload/v1697880347/search_jbzyru.png"
+              alt=""
+            />
+          </div>
+        </div>
+        <div class="grid grid-cols-4 gap-14">
+          <Modules>
+            <template #icon>
+              <img
+                src="https://res.cloudinary.com/dxiflsxek/image/upload/v1697879719/foodi/Untitled-1dolla_ivptiw.jpg"
+                alt=""
+              />
+            </template>
+            <template #text>
+              <p class="text-xs text-gray-500">Earning</p>
+              <p class="font-bold">$198k</p>
+              <p class="text-xs">
+                <span class="text-xs text-green-600">37.3% </span>this month
+              </p>
+            </template>
+          </Modules>
+          <Modules>
+            <template #icon>
+              <img
+                src="https://res.cloudinary.com/dxiflsxek/image/upload/v1697879719/foodi/order_ewhuse.jpg"
+                alt=""
+              />
+            </template>
+            <template #text>
+              <p class="text-xs text-gray-500">Orders</p>
+              <p class="font-bold">$2.4k</p>
+              <p class="text-xs">
+                <span class="text-xs text-red-600">2% </span>this month
+              </p>
+            </template>
+          </Modules>
+          <Modules>
+            <template #icon>
+              <img
+                src="https://res.cloudinary.com/dxiflsxek/image/upload/v1697879719/foodi/balance_sclabu.jpg"
+                alt=""
+              />
+            </template>
+            <template #text>
+              <p class="text-xs text-gray-500">Balance</p>
+              <p class="font-bold">$2.4k</p>
+              <p class="text-xs">
+                <span class="text-xs text-red-600">2% </span>this month
+              </p>
+            </template>
+          </Modules>
+
+          <Modules>
+            <template #icon>
+              <img
+                src="https://res.cloudinary.com/dxiflsxek/image/upload/v1697879719/foodi/total_zygeak.jpg"
+                alt=""
+              />
+            </template>
+            <template #text>
+              <p class="text-xs text-gray-500">Total Sales</p>
+              <p class="font-bold">$198k</p>
+              <p class="text-xs">
+                <span class="text-xs text-green-600">37.3% </span>this month
+              </p>
+            </template>
+          </Modules>
+        </div>
+      </DashBoard>
+    </article>
   </section>
 </template>
