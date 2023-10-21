@@ -1,9 +1,11 @@
 <script setup>
 import Container from "../components/Menus/Container.vue";
 import Items from "../components/Menus/Items.vue";
-import DashBoard from "../components/Dashboard.vue";
-import Modules from "../components/Modules.vue";
+import DashBoard from "../components/Dashboard/Dashboard.vue";
+import Modules from "../components/Dashboard/Modules.vue";
 import { useRoute } from "vue-router";
+import Overview from "../components/Dashboard/Overview.vue";
+import Dbutton from "../components/Dashboard/Dbutton.vue";
 const route = useRoute();
 </script>
 
@@ -123,6 +125,15 @@ const route = useRoute();
             </template>
           </Modules>
         </div>
+
+        <Overview>
+          <template #Overview>
+          </template>
+
+          <template #customer>
+            
+          </template>
+        </Overview>
       </DashBoard>
     </article>
   </section>
