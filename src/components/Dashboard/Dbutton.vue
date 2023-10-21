@@ -7,6 +7,8 @@
         ? 'bg-yellow-200 rounded-lg w-7 h-72'
         : props.variant == 'tertiary'
         ? 'bg-yellow-200 rounded-lg w-7 h-44'
+        : props.variant == 'semisecond'
+        ? 'bg-yellow-200 rounded-lg w-7 h-32'
         : ''
     "
   >

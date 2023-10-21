@@ -127,11 +127,16 @@ const route = useRoute();
         </div>
 
         <Overview>
-          <template #Overview>
-          </template>
+          <template #Overview> </template>
 
           <template #customer>
-            
+            <p class="text-3xl font-bold">Customers</p>
+            <p class="text-gray-300">Customer that buy products</p>
+            <img
+              class="w-52"
+              src="https://res.cloudinary.com/dxiflsxek/image/upload/v1697886814/pie_gezme3.svg"
+              alt=""
+            />
           </template>
         </Overview>
       </DashBoard>
