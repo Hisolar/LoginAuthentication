@@ -6,11 +6,12 @@ import Modules from "../components/Dashboard/Modules.vue";
 import { useRoute } from "vue-router";
 import Overview from "../components/Dashboard/Overview.vue";
 import Dbutton from "../components/Dashboard/Dbutton.vue";
+import Product from "../components/Dashboard/Product.vue";
 const route = useRoute();
 </script>
 
 <template>
-  <section class="bg-yellow-100 flex overflow-hidden w-full h-screen">
+  <section class="bg-yellow-100 flex overflow-y-scroll w-full h-full">
     <div class="w-56 shrink-0 bg-yellow-50 h-full">
       <div class="font-bold text-2xl px-4 py-2">Admin Portal</div>
       <Container>
@@ -139,6 +140,32 @@ const route = useRoute();
             />
           </template>
         </Overview>
+        <Product>
+          <div class="flex items-center justify-between">
+            <p>Product Sell</p>
+            <div class="flex gap-10 items-center">
+              <div class="relative">
+                <input
+                  class="outline-none bg-yellow-100 px-4"
+                  type="search"
+                  placeholder="search"
+                />
+                <img
+                  class="w-4 absolute top-[6px] left-[3px]"
+                  src="https://res.cloudinary.com/dxiflsxek/image/upload/v1697880347/search_jbzyru.png"
+                  alt=""
+                />
+              </div>
+              <div class="bg-yellow-100 px-2 py-1 w-fit rounded-md">
+                <p>last 30 Days</p>
+              </div>
+            </div>
+          </div>
+          <img
+            src="https://res.cloudinary.com/dxiflsxek/image/upload/v1697997645/product_b29bbk.jpg"
+            alt=""
+          />
+        </Product>
       </DashBoard>
     </article>
   </section>
